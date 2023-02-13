@@ -1,0 +1,27 @@
+{
+  "name": "gameygame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpearman15/gameygame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpearman15/gameygame/issues"
+  },
+  "homepage": "https://github.com/mpearman15/gameygame#readme",
+  "dependencies": {
+    "p5.play": "^3.5.23"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.35",
+    "rollup-plugin-copy": "^3.4.0"
+  }
+}
