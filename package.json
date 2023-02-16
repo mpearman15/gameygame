@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config"
+    "start": "web-dev-server --node-resolve --open --watch",
+    "build": "rollup --config",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,12 @@
   },
   "homepage": "https://github.com/mpearman15/gameygame#readme",
   "dependencies": {
+    "p5": "^1.5.0",
     "p5.play": "^3.5.23"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.35",
+    "gh-pages": "^5.0.0",
     "rollup-plugin-copy": "^3.4.0"
   }
 }
