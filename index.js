@@ -56,44 +56,44 @@ window.draw = () => {
     fill(255);
     textAlign(CENTER);
     text("Your score was: " + score, width/2, height/2);
-    text("Game Over! Click anywhere to restart", width/2, height/2 + 20);
+    // text("Game Over! Click anywhere to restart", width/2, height/2 + 20);
     spr.remove();
     obstacleSprites.remove();
-    if (mouseIsPressed) {
-      isGameOver = false;
-      score = 0;
-      groundSprites.remove();
-      ceilingSprites.remove();
-      groundSprites = new Group();
-      ceilingSprites = new Group();
-      numGroundSprites = width / GROUND_WIDTH + 1;
-      for (var n = 0; n < numGroundSprites; n++) {
-        var groundSprite = createSprite(
-          n * 50,
-          height - 25,
-          GROUND_WIDTH,
-          GROUND_HEIGHT
-        )
-        groundSprite.shapeColor = colors[floor(random(colors.length))];
-        groundSprite.stroke = 'none';
-        groundSprites.add(groundSprite);
-        var ceilingSprite = createSprite(
-          n * 50,
-          25,
-          GROUND_WIDTH,
-          GROUND_HEIGHT
-        )
-        ceilingSprite.shapeColor = colors[floor(random(colors.length))];
-        ceilingSprite.stroke = 'none';
-        ceilingSprites.add(ceilingSprite);
-      }
-      //creating the player
-      spr = createSprite(100, height - 75, 50);
-      spr.shapeColor = colors[floor(random(colors.length))];
-      spr.stroke = 'none';
-      // create obstacle group
-      obstacleSprites = new Group();
-    }
+    // if (mouseIsPressed) {
+    //   isGameOver = false;
+    //   score = 0;
+    //   groundSprites.remove();
+    //   ceilingSprites.remove();
+    //   groundSprites = new Group();
+    //   ceilingSprites = new Group();
+    //   numGroundSprites = width / GROUND_WIDTH + 1;
+    //   for (var n = 0; n < numGroundSprites; n++) {
+    //     var groundSprite = createSprite(
+    //       n * 50,
+    //       height - 25,
+    //       GROUND_WIDTH,
+    //       GROUND_HEIGHT
+    //     )
+    //     groundSprite.shapeColor = colors[floor(random(colors.length))];
+    //     groundSprite.stroke = 'none';
+    //     groundSprites.add(groundSprite);
+    //     var ceilingSprite = createSprite(
+    //       n * 50,
+    //       25,
+    //       GROUND_WIDTH,
+    //       GROUND_HEIGHT
+    //     )
+    //     ceilingSprite.shapeColor = colors[floor(random(colors.length))];
+    //     ceilingSprite.stroke = 'none';
+    //     ceilingSprites.add(ceilingSprite);
+    //   }
+    //   //creating the player
+    //   spr = createSprite(100, height - 75, 50);
+    //   spr.shapeColor = colors[floor(random(colors.length))];
+    //   spr.stroke = 'none';
+    //   // create obstacle group
+    //   obstacleSprites = new Group();
+    // }
   } else {
     background(150, 200, 250);
     if (keyboard.pressed('space')) {
