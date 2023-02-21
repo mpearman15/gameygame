@@ -98,6 +98,7 @@ window.draw = () => {
     background(150, 200, 250);
     if (keyboard.pressed('space')) {
       score = score + 1;
+      spr.text = score;
       spr.velocity.y = switchGravity;
       switchGravity = (-1) * switchGravity;
     }
@@ -130,7 +131,6 @@ window.draw = () => {
         obstacleSprites.remove(firstObstacle);
     }
     for (var i = 0; i < obstacleSprites.length; i++) {
-      // obstacleSprites[i].position.x -= 5;
       obstacleSprites[i].overlap(spr, endGame);
     }
   }
